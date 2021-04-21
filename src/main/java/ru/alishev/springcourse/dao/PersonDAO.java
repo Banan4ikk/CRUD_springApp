@@ -1,11 +1,11 @@
 package ru.alishev.springcourse.dao;
 
 import org.springframework.stereotype.Component;
-import ru.alishev.springcourse.controllers.Person;
+import ru.alishev.springcourse.models.Person;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
+
 @Component
 public class PersonDAO {
     private static int peopleCount = 0;
@@ -13,10 +13,10 @@ public class PersonDAO {
     {
         people = new ArrayList<>();
 
-        people.add(new Person(++peopleCount,"Tom","Tommy","Tom@gmail.com"));
-        people.add(new Person(++peopleCount,"Bob","Bobby","Bob@gmail.com"));
-        people.add(new Person(++peopleCount,"James","Jamesik","james@gmail.com"));
-        people.add(new Person(++peopleCount,"Cat","Catty","Cat@gmail.com"));
+        people.add(new Person(++peopleCount,"Tom",20,"Tom@gmail.com"));
+        people.add(new Person(++peopleCount,"Bob",18,"Bob@gmail.com"));
+        people.add(new Person(++peopleCount,"James",21,"james@gmail.com"));
+        people.add(new Person(++peopleCount,"Cat",16,"Cat@gmail.com"));
     }
 
     public List<Person> index(){
@@ -36,7 +36,7 @@ public class PersonDAO {
         Person personToUpdate = show(id);
 
         personToUpdate.setName(updatedPerson.getName());
-        personToUpdate.setSurname(updatedPerson.getSurname());
+        personToUpdate.setAge(updatedPerson.getAge());
         personToUpdate.setEmail(updatedPerson.getEmail());
     }
 

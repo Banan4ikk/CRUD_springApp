@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="spring-crud-app1:war">
+  <artifact type="war" name="MyCRUDApp:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <module>spring-crud-app1</module>
+        <module>MyCRUDApp</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="archive" name="spring-mvc-app1.war">
-      <element id="artifact" artifact-name="spring-crud-app1:war exploded" />
+      <element id="artifact" artifact-name="MyCRUDApp:war exploded" />
     </root>
   </artifact>
 </component>
